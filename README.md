@@ -1,7 +1,7 @@
-[![Docker Build Status](https://img.shields.io/docker/build/thmhoag/arkserver.svg?style=flat-square)](https://hub.docker.com/r/thmhoag/arkserver/builds/) 
-[![Docker Automated build](https://img.shields.io/docker/automated/thmhoag/arkserver.svg?style=flat-square)](https://hub.docker.com/r/thmhoag/arkserver/builds/) 
-[![Docker Pulls](https://img.shields.io/docker/pulls/thmhoag/arkserver.svg?style=flat-square)](https://hub.docker.com/r/thmhoag/arkserver/) 
-[![License](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/thmhoag/arkserver/blob/master/LICENSE)
+[![Docker Build Status](https://img.shields.io/docker/build/jackykwandesign/arkserver.svg?style=flat-square)](https://hub.docker.com/r/jackykwandesign/arkserver/builds/) 
+[![Docker Automated build](https://img.shields.io/docker/automated/jackykwandesign/arkserver.svg?style=flat-square)](https://hub.docker.com/r/jackykwandesign/arkserver/builds/) 
+[![Docker Pulls](https://img.shields.io/docker/pulls/jackykwandesign/arkserver.svg?style=flat-square)](https://hub.docker.com/r/jackykwandesign/arkserver/) 
+[![License](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](https://github.com/jackykwandesign/arkserver/blob/master/LICENSE)
 
 
 # arkserver
