@@ -33,9 +33,10 @@ echo "Cleaning up any leftover arkmanager files..."
 
 echo "Creating arkmanager.cfg from environment variables..."
 echo -e "# Ark Server Tools - arkmanager config\n# Generated from container environment variables\n\n" > /ark/config/arkmanager.cfg
-if [ -f /ark/config/arkmanager_base.cfg ]; then
-	cat /ark/config/arkmanager_base.cfg >> /ark/config/arkmanager.cfg
-fi
+
+#if [ -f /ark/config/arkmanager_base.cfg ]; then
+#	cat /ark/config/arkmanager_base.cfg >> /ark/config/arkmanager.cfg
+#fi
 
 echo -e "\n\narkserverroot=\"/ark/server\"\n" >> /ark/config/arkmanager.cfg
 printenv | sed -n -r 's/am_(.*)=(.*)/\1=\"\2\"/ip' >> /ark/config/arkmanager.cfg
@@ -86,10 +87,26 @@ else
 fi
 
 # Create symlinks for configs
-[ -f /ark/config/AllowedCheaterSteamIDs.txt ] && ln -sf /ark/config/AllowedCheaterSteamIDs.txt /ark/server/ShooterGame/Saved/AllowedCheaterSteamIDs.txt
-[ -f /ark/config/Engine.ini ] && ln -sf /ark/config/Game.ini /ark/server/ShooterGame/Saved/Config/LinuxServer/Engine.ini
-[ -f /ark/config/Game.ini ] && ln -sf /ark/config/Game.ini /ark/server/ShooterGame/Saved/Config/LinuxServer/Game.ini
-[ -f /ark/config/GameUserSettings.ini ] && ln -sf /ark/config/GameUserSettings.ini /ark/server/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini
+
+if [ -f /ark/config/AllowedCheaterSteamIDs.txt ]; then
+	echo "Create symlinks for configs...AllowedCheaterSteamIDs.txt"
+	ln -sf /ark/config/AllowedCheaterSteamIDs.txt /ark/server/ShooterGame/Saved/AllowedCheaterSteamIDs.txt
+fi
+
+if [ -f /ark/config/Engine.ini ]; then
+	echo "Create symlinks for configs...Engine.ini"
+	ln -sf /ark/config/Engine.ini /ark/server/ShooterGame/Saved/Config/LinuxServer/Engine.ini
+fi
+
+if [ -f /ark/config/Game.ini ]; then
+	echo "Create symlinks for configs...Game.ini"
+	ln -sf /ark/config/Game.ini /ark/server/ShooterGame/Saved/Config/LinuxServer/Game.ini
+fi
+
+if [ -f /ark/config/GameUserSettings.ini ]; then
+	echo "Create symlinks for configs...GameUserSettings.ini"
+	ln -sf /ark/config/GameUserSettings.ini /ark/server/ShooterGame/Saved/Config/LinuxServer/GameUserSettings.ini
+fi
 
 if [[ "$VALIDATE_SAVE_EXISTS" = true && ! -z "$am_ark_AltSaveDirectoryName" && ! -z "$am_serverMap" ]]; then
 	savepath="/ark/server/ShooterGame/Saved/$am_ark_AltSaveDirectoryName"
