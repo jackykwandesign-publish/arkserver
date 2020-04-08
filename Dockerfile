@@ -31,7 +31,7 @@ ENV am_ark_SessionName="Test Ark Server" \
     am_ark_QueryPort=27016 \
     am_ark_Port=7779 \
     am_ark_RCONPort=32330 \
-    am_arkwarnminutes=15
+    am_arkwarnminutes=16
 
 VOLUME /ark
 
