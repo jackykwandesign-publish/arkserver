@@ -26,10 +26,10 @@ USER steam
 
 ENV am_ark_SessionName="Ark Server" \
     am_serverMap="TheIsland" \
-    am_ark_ServerAdminPassword="k3yb04rdc4t" \
-    am_ark_MaxPlayers=70 \
-    am_ark_QueryPort=27015 \
-    am_ark_Port=7778 \
+    am_ark_ServerAdminPassword="admin" \
+    am_ark_MaxPlayers=10 \
+    am_ark_QueryPort=27016 \
+    am_ark_Port=7779 \
     am_ark_RCONPort=32330 \
     am_arkwarnminutes=15
 
